@@ -1,11 +1,14 @@
 public class VideojuegoDigital extends Videojuego {
-    public VideojuegoDigital(String titulo, String consola, double precioBase, double envio) {
-        super(titulo, consola, precioBase, envio);
+   private double descuento;
+
+    public VideojuegoDigital(String titulo, String consola, double precioBase, String Genre, double descuento) {
+        super(titulo, consola, precioBase, Genre);
+        this.descuento = descuento;
     }
 
     public double calcularPrecioFinal() {
 
-        double precioFinal = precioBase - envio;
+        double precioFinal = precioBase - descuento;
         return precioFinal;
     }
 }
